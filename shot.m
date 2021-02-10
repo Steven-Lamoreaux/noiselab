@@ -1,0 +1,9 @@
+lbd=24000;
+upd=26000;
+np=size(data);
+time=25;
+v0=0.1;
+apwr=sum(pwr(lbd:upd))/(np(1))^2/(upd-lbd+1)
+variance=var(pwr(lbd:upd))/(np(1))^2/(upd-lbd+1)
+vv=apwr/gain
+elec=(vv*10000*time)/(2*v0*15000^2)
